@@ -1,0 +1,32 @@
+<html>
+
+<head>
+ 
+<script type="text/javascript">
+function getfocus()
+{
+ document.getElementById('id2').style.color='red' 
+ document.getElementById('b1').value='New Caption' 
+ window.document.getElementById('id2').innerHTML="New Link"
+}
+
+function losefocus()
+{
+ document.getElementById('id2').style.color='green'
+ document.myForm.btn.value="Now Click" 
+ window.Link.innerHTML="Click Here"
+}
+</script>
+</head>
+
+<body>
+<a id="id2" name='Link' href="http://www.google.com">Search on the web</a>
+<form name='myForm'>
+<input type="button" onclick="getfocus()" value="Get Focus">
+<input type="button" id='b1' name='btn' onclick="losefocus()" value="Lose Focus">
+</form>
+</body>
+
+</html>
+
+

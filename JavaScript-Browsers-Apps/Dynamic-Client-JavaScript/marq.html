@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Ads</title>
+</head>
+<body>
+<script type="text/javascript">
+	function handle()
+	{
+		alert('Hi u clicked me ?');
+		var element = document.getElementById("myText")
+		element.setAttribute("scrolldelay", "450");  
+		element.setAttribute("direction", "right");  
+	}
+</script>
+
+<input type="text"  id="myText2"/>
+
+<marquee  id='myText' direction="left" behavior="scroll"
+	onmousedown="handle()" scrolldelay="10">Get
+the text move fast with Zest and Zeal!</marquee>
+</body>
+</html>
+
+
+

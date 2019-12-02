@@ -1,0 +1,57 @@
+<HTML>
+<HEAD>
+<TITLE> Sum Function </TITLE>
+<SCRIPT LANGUAGE = "JavaScript">
+//Should not overload these functions with variable arguments
+
+  var num = 234
+  num = 45
+
+
+
+function Sum ()
+{     
+	var len = Sum.arguments.length
+	var ans = 0
+	for (i=0; i<len; i++)	
+	{
+
+           
+		ans += Sum.arguments[i]	
+	}
+	document.write("<br>");
+	document.write("\nThe Sum for variable args Is" + ans)
+}
+
+function Sum(num1, num2)
+{
+	var ans = num1 + num2
+	document.write("<br>");
+	document.write ("The Sum in two args sum function Is " + ans)	
+return ans;
+} 
+
+
+
+</SCRIPT>
+</HEAD>
+<BODY>
+
+
+<H1 ALIGN = "CENTER"> Function To Add the Numbers</H1>
+  <SCRIPT LANGUAGE = "JavaScript">
+   //Sum(a)
+   Sum (1,2); 
+   Sum (10,3,30) 
+   Sum (10,true,2,4)  
+   var s =  Sum(1)
+   Sum("asdg",true,28,null,2,true,false)
+  
+
+
+
+
+
+</SCRIPT>
+<BODY>
+</HTML> 

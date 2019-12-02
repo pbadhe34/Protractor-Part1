@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+ <testsuite name="phoneModule App Test Page" timestamp="2017-08-24T17:19:38" hostname="localhost" time="3.922" errors="0" tests="1" skipped="0" disabled="0" failures="0">
+  <testcase classname="phoneModule App Test Page" name="should redirect index.html to index.html#/phones" time="3.915" />
+ </testsuite>
+ <testsuite name="Phone model list view test" timestamp="2017-08-24T17:19:42" hostname="localhost" time="3.313" errors="0" tests="3" skipped="0" disabled="0" failures="0">
+  <testcase classname="Phone model list view test" name="should filter the phone list as user types into the search box" time="1.375" />
+  <testcase classname="Phone model list view test" name="should be possible to control phone order via the drop down select box" time="0.938" />
+  <testcase classname="Phone model list view test" name="should render phone specific links" time="0.997" />
+ </testsuite>
+ <testsuite name="Phone detail view test" timestamp="2017-08-24T17:19:45" hostname="localhost" time="2.221" errors="0" tests="3" skipped="0" disabled="0" failures="0">
+  <testcase classname="Phone detail view test" name="should display nexus-s page" time="0.675" />
+  <testcase classname="Phone detail view test" name="should display the first phone image as the main phone image" time="0.653" />
+  <testcase classname="Phone detail view test" name="should swap main image if a thumbnail image is clicked on" time="0.89" />
+ </testsuite>
+</testsuites>

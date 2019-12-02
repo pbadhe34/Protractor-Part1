@@ -1,0 +1,12 @@
+<HTML>
+<HEAD>
+<SCRIPT LANGUAGE = "JavaScript">
+	Func = new Function ("x", "y", "tot=x+y ; return tot")
+	myFunc = Func.valueOf()	/* Assigning Func to myFunc */
+	result = myFunc (4,5)	/* Invoking myFunc with values 1 and 2 */
+	document.write("The Result = "+result +"<br>") 	/* 3 will be displayed */
+	document.write("The Result = "+myFunc (4,5) +"<br>") 
+</SCRIPT>
+<BODY>
+</BODY>
+</HTML> 

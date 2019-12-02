@@ -1,0 +1,102 @@
+<HTML>
+<HEAD><TITLE> Sum Function </TITLE></HEAD>
+<BODY>
+<SCRIPT LANGUAGE = "JavaScript">
+//Can those functions be overloaded ?
+
+
+ 
+ function connect(url,param)
+ {
+ 	 //url and param
+ }
+ connect('myData')
+ connect('google.com','val')
+ //connect(param:'val')
+ 
+
+// var num1 = Sum;
+// Add.getData= 123;
+// Add.process = Sum
+ //Add.getSum = function(){
+
+
+
+ function varArgs()
+ {
+	 
+ }
+ 
+ varArgs.Sum=function()
+ {
+	   var len = varArgs.Sum.arguments.length
+		var ans = 0
+		for (i=0; i<len; i++)	
+		{
+			ans += varArgs.Sum.arguments[i]	
+		}
+		document.write("<br>");
+		document.write("\nThe Sum for variable args Is " + ans)
+ }
+ 
+ var twoArgs = { }
+ 
+ twoArgs.Sum= function(num1, num2)
+ {
+	   var ans = num1 + num2
+		document.write("<br>");
+		document.write ("The Sum with two args function Is " + ans)
+ }
+ 
+var name = 123
+name = true
+
+function Sum()
+{
+	
+}
+ 
+ 
+
+ //Add.getSum()
+
+var num2 = Sum;
+
+function Sum (num1,num2)
+{
+ var ans = num1 + num2
+ document.write("<br>");
+ document.write ("The Sum with two args function Is " + ans)
+} 
+
+
+ var ggs = Sum(v)
+
+function Sum ()
+{     
+	var len = Sum.arguments.length
+	var ans = 0
+	for (i=0; i<len; i++)	
+	{
+		ans += Sum.arguments[i]	
+	}
+	document.write("<br>");
+	document.write("\nThe Sum for variable args Is " + ans)
+}
+
+</SCRIPT>
+
+<H1 ALIGN = "CENTER"> Function To Add the Numbers</H1>
+  <SCRIPT LANGUAGE = "JavaScript">
+   window.twoArgs.Sum (1,2);
+   varArgs.Sum (10,3,30) 
+   window.varArgs.Sum ("Hello",8,1,true) 
+   twoArgs.Sum()
+ /*
+   Sum(11,34,45,"heell")
+   Sum(3,5,1,9,true)
+   Sum(0) 
+*/
+  </SCRIPT>
+<BODY>
+</HTML> 

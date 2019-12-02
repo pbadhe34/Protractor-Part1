@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<title>User Register Page</title>
+</head>
+<body>
+
+<h2>Pl. submit your details and click register button</h2><b></b>
+<form method='post' action=".">
+<Div><b>User Registration Details </b></div><p></p>
+
+<div id ="divR">Status</div>
+ User Login ID  : &nbsp;&nbsp;<input type='text' name="userName" id="uName" class=uClass" autofocus autocomplete="on"/><br></br>
+ User Password :  &nbsp;<input type='password' name="userPassword" id ="uPass" class='cClass' pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"/><br></br>
+
+ Confirm Password :  &nbsp;<input type='password' name="confirmPassword" id ="uPass" class='cClass' pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"/><br></br>
+
+User Mail :  &nbsp;<input type='email' name="userMail" id ="uMail" class='dClass' placeholder="userid@server.com" required/> <br></br>
+
+
+User Message :  &nbsp<textarea rows="4" cols="50" placeholder="Type your message here..." id="txtMsg">
+ 
+</textarea>
+<br></br>
+
+ <br></br>
+
+   Are you working ?  <input type='checkbox' name="isWorking"  id="workStatus"class='wClass' checked /> </<br></br>
+
+
+ Books <input type='number' name="MyBooks"  id="numBooks"  value="1" class='bClass'/><br></br>
+
+<p id="p1">
+School code(2 letter): <input type="text" name="s_code" id="commonData"
+pattern="[A-Za-z]{2}"<br></br>
+</p>
+
+<div id="divP">
+        <legend>What are Your Subjects Dear?</legend>
+                        <input type="checkbox" name="History" value="his" />History<br />
+                        <input type="checkbox" name="Science" value="sci" id="commonData" />House Rent<br />
+                        <input type="checkbox" name="Language" value="english" />English<br />
+                         
+        </div><br/>
+
+
+<p id="data">
+Are you working ?<br></br>
+  <input type="radio" name="work" value="PartTime" id="pt1" />Part<br / >
+  <input type="radio" name="work" value="Evening" id="rd2" />Evening<br />
+  <input type="radio" name="work" value="DaYCare" id="dc3" />Careed<br />
+
+  <input type="button" name="btn" value="Update" id="commonID" />Button Type<br />
+</p>
+
+ <legend>What is Your choice of divison ?</legend>
+
+<select name="div">
+  <option value="a">A</option>
+  <option value="b" selected>B div</option>
+  <option value="c">C Div</option>
+  <option value="d">D Div</option>
+</select>
+  <br></br>
+
+<input type='button' value="Insert Values" id="add"/>
+
+ 
+ <br></br>
+
+
+
+    <input type='submit' value="Register" formtarget="_blank" id="add-In"/>
+    <input type='reset' value="Clear" id="reset"/>
+   
+   <br></br>
+
+   </form>
+
+
+
+</body>
+</html>

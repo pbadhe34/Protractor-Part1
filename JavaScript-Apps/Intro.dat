@@ -1,0 +1,10 @@
+
+console.log("hi,this is node..");
+
+console.log("The current directory is "+__dirname)
+console.log("The current object  type is  "+typeof(this))
+console.log("The current object   is  "+this.constructor.name)
+
+for(props in this)
+console.log(props)
+

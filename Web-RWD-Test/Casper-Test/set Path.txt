@@ -1,0 +1,1 @@
+set path=%path%;D:\Web-Mobile-UI\casperjs-1.1.4-1\bin;D:\Web-Mobile-UI\phantomjs-2.1.1-windows\bin;

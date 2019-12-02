@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Javscript DOM Structure </title>
+</head>
+<!--<body onload="start()">-->
+<body id="myBody" bgcolor="red" >
+
+<script type="text/javascript">
+var data="test"
+message=true
+function start()
+{
+   window.alert("Starting the page")
+   window.status ="The page is loading.."
+   text = window.document.title
+   alert("The page title is "+text);
+   alert("Current window status is "+window.defaultStatus)	   
+	
+}
+function testDocStructure()
+{
+	doc = window.document
+	doc.myForm.msg1.value= "Current document url is  "+doc.URL	 
+	
+	form1 = doc.forms[0]
+    //form1 = doc.myForm
+    //num = form1.attributes.length
+    
+    actionValue =	form1.attributes['action'].nodeValue 
+    doc.myForm.msg2.value=actionValue   
+    
+	//attrNode =	form1.attributes[3].nodeName
+	//atrValue= form1.attributes[3].nodeValue
+	
+	//window.document.body.attributes['bgcolor']=red	//attributes are readonly
+	
+	bodyId = doc.body.attributes['id'].nodeValue	
+	doc.myForm.msg3.value="Body element id is "+bodyId
+	                  	
+}
+function testDate()
+{
+	doc = window.document
+	form2 = doc.myForm	 
+	form2.msg1.value=new Date() 
+                      	
+}
+ 
+</script>
+<form action="runTest" name="myForm">
+	<input type="button" value="TestDoc" onclick="testDocStructure()"/><br/>
+	<input type="button" value="TestDate" onclick="testDate()"/><br/>
+	<input type="text" name="msg1" value=" " size="40"/><br/>
+	<input type="text" name="msg2" value=" " size="20"/><br/>
+	<input type="text" name="msg3" value=" " size="25"/>
+</form>
+</body>
+</html>

@@ -1,0 +1,71 @@
+ 
+Install Karma in local dir
+npm install karma --save-dev
+npm install -g karma
+
+npm install  karma --save-dev  : local installation
+
+
+Install plugins for browser launchers locally/globally that the project needs:
+npm install karma-jasmine karma-chrome-launcher --save-dev  : lovally
+npm install karma-firefox-launcher --save-dev
+
+npm install -g karma-jasmine karma-chrome-launcher --save-dev : globally
+npm install -g karma-firefox-launcher  --save-dev 
+
+Run Karma:
+./node_modules/karma/bin/karma start
+
+OR set the path as 
+
+set path=%path%;/node_modules/karma/bin;
+
+OR 
+
+set path=%path%;C:/Users/Prakash/AppData/Roaming/npm;
+
+The dir C:/Users/Prakash/AppData/Roaming/npm contains karam.cmd 
+
+npm install -g jasmine-core --save-dev
+
+npm install -g karma-jasmine --save-dev
+  
+Install Jasmine reporter
+
+Install Jasmine reporter : npm install -g jasmine-reporters --save-dev
+
+Install junit-reporter reporter
+
+npm install -g karma-junit-reporter --save-dev
+
+To install the html reporter
+
+npm install -g karma-htmlfile-reporter --save-dev
+npm install -g karma-spec-reporter --save-dev
+
+To get the help
+
+karma start --help
+
+Run karma with : karma start myConf.js
+
+To generate the test reports 
+
+karma start karma.conf.js --log-level debug --single-run --reporters progress,spec,dots,junit,html
+
+karma start karma.conf.js  --single-run --reporters progress,spec,dots,junit,html
+
+karma start --single-run --reporters html
+
+karma start karma.conf.js --log-level debug --single-run --reporters junit
+
+
+
+The sample configuration file karma.conf.js can be generated using command : karma init
+
+ 
+
+
+
+
+ 

@@ -1,0 +1,27 @@
+<html>
+<head>
+<script type="text/javascript">
+function ChangeBackground(image)
+{
+   //document.body.background=image
+document.body.style.background = 'url("' + image + '") no-repeat center center fixed';
+/*
+document.body.style.background = 'url("' + image + '") repeat-x right top';
+*/
+
+
+
+}
+</script>
+</head>
+
+<body>
+
+  <p>
+ <input type="button" onclick="ChangeBackground('Sunset.jpg')" value='UpdateBackground'/></br></p>
+ <input type="button" onclick="ChangeBackground('duke.gif')" value='RestoreBackground'/>
+
+
+</body>
+</html>
+

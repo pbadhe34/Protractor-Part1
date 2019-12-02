@@ -1,0 +1,48 @@
+<html>
+<body>
+
+<script type="text/javascript">
+ 
+function work()
+{
+  msg = update("Hi");
+  alert("Inside work  " + msg);
+
+}
+
+function work2()
+{
+   
+  alert("Inside work2  " );
+
+}
+function addImport()
+{
+	   // Create the Script Object
+	var script = document.createElement('script');
+	script.src = 'second.js';
+	script.type = 'text/javascript';	 
+	script.id = 'scriptID2'; // referencing the object later for removal
+	// Insert the created object to the html head element
+	var head = document.getElementsByTagName('head').item(0);
+	head.appendChild(script);
+	
+}
+ 
+</script>
+
+
+<form>
+<input type="button" value="Add Script" 
+    onclick="addImport();"/><br>
+
+<input type="button" value="Test" 
+    onclick="work();"/><br>	
+	
+</form>
+
+</body>
+</html>
+
+
+

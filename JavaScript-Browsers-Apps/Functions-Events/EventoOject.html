@@ -1,0 +1,26 @@
+<html>
+<head><title>Event</title>
+<script language="javascript">
+function handler1()
+{
+  window.defaultStatus=event.screenX+","+event.screenY
+  alert("Handler1");
+}
+function handler2()
+{
+   alert("Key code : " +event.keyCode + "\n" + "Event type:" +event.type)
+}
+function handler3()
+{
+    alert("Double clicked at X : " +event.screenX + ",Y :" +event.screenY)
+}
+</script>
+</head>
+<!--Body onMouseMove='handler1()' onmouseover='handler2()'-->
+<Body>
+<h1 align="center"> The event object</h1><hr>
+<!--a href="something.html" onClick="return false" -->
+<a href="file1.html" onDblclick='handler3()'>Double click here</a>
+</body>
+</html>
+

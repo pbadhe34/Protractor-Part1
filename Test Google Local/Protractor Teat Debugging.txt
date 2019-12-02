@@ -1,0 +1,19 @@
+node --inspect node_modules/protractor/bin/protractor conf.js
+
+  To debug the protrcator script
+
+    node --inspect-brk  node_modules/protractor/bin/protractor conf.js
+
+
+  node --inspect-brk  node_modules/protractor/bin/protractor conf-FF.js
+
+  node --inspect-brk  node_modules/protractor/bin/protractor conf-ie.js
+
+
+
+   node --inspect-brk protractor conf.js
+
+    Open chrome inspector: Enter "chrome://inspect/#devices" in browser, find
+    the current running target 
+
+    

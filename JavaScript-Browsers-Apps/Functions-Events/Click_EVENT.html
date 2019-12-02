@@ -1,0 +1,31 @@
+<HTML>
+<HEAD>
+<TITLE> JavaScript Events </TITLE>
+<SCRIPT LANGUAGE = "JavaScript">
+function func2(event)
+{
+   alert("FUNCTION2 CALLED with  "+event) 
+    //IE not supporting      
+   //event.preventDefault(); //Prevent the next link loading
+   return false;//Prevent the next handler and default behaviour
+}
+
+function func1()
+{
+   document.write("FUNCTION1 CALLED")
+}
+
+function func3()
+{
+   alert("FUNCTION3 CALLED")
+   
+}
+
+</SCRIPT>
+</HEAD>
+<BODY>
+<A HREF="pink1.html" onClick='return false;func2(event);func3(event)' onDblClick = 'func1()'>Click This </A>  
+</BODY>
+</HTML> 
+
+

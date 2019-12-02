@@ -1,0 +1,7 @@
+  The protractor version is 5.4.2
+  The dependent jasmione versions are
+  -jasmine v3.5.0
+  -jasmine-core v3.5.0 
+
+  The dependent webdriver-manager versoon is 12.1.7
+   

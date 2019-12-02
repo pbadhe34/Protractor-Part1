@@ -1,0 +1,62 @@
+<html>
+
+<head>
+ 
+<script type="text/javascript">
+	
+(function () {
+ var info = "Shot in 2011";
+  alert(info)
+})();
+function change()
+{
+document.getElementById('test').style.color='red' 
+document.getElementById('b1').value='New Caption' 
+document.myForm.btn.value="Try It" 
+form1 = document.myForm;
+//form1 = document.getElementById('frmId')
+document.getElementById('test').style.color='blue' ;
+document.getElementById('b1').value='Change It' ;
+
+window.document.getElementById('test').innerHTML="Try It"
+  
+}
+
+function restore()
+{
+document.getElementById('test').style.color='blue'
+document.myForm.btn.value="Revert" 
+document.getElementById('b1').value='Restore'
+window.document.getElementById('test').innerHTML="<font color='blue' size='24'>Update</font>"
+//form1 = document.getElementById('frmId')
+form1 = document.myForm;
+document.getElementById('b1').value='UpdateMe' ;
+}
+function searchMe(event )
+{
+	alert('Oh.Really?')
+	//event.preventDefault()
+	// alert(event)
+	return false;
+}
+function TryIt(event)
+{
+	alert('..Not Now..')
+	//event.preventDefault()
+	return false;
+}
+</script>
+</head>
+
+<body>
+
+<form name='myForm' id='frmId'>
+<a id="test" name='Link' href="http://www.google.com" onclick='searchMe(event ),TryIt(event)',false>Search with the best!</a><p></p>
+<input type="button" onclick="change()" value="Update">
+<input type="button" id='b1' name='btn' onclick="restore()" value="Revert">
+</form>
+</body>
+
+</html>
+
+

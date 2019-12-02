@@ -1,0 +1,92 @@
+<html>
+  <head>
+ <title>Event Bubbling</title>
+ 
+<script type="text/javascript">
+      function documentCaptureEvent(event)
+	{
+		    alert("Document Clicked in Capture Event" + event);                 
+                 
+	}   
+       
+  function documentBubbleEvent(event)
+	{
+		    alert("Document Clicked in Bubble Event " + event);                 
+                 
+	}   
+ //Check the function supported..
+//Otherwise it may break at Browser!
+
+//if (document.addEventListener)//Non IE Browser
+  {
+    document.addEventListener("click", documentCaptureEvent, true);//Captured Event in Non -IE firefox/netscape
+    document.addEventListener("click", documentBubbleEvent, false);//Bubbled event in Non -IE firefox/netscape
+  }
+
+// Register IE style events
+
+if (document.attachEvent)//IE Browser
+{
+    document.attachEvent("onclick",documentBubbleEvent);//Bubbled event in IE
+}
+ 
+
+	function innerChildEvent(event)
+	{
+		    
+		  alert("outer-inner-region " + event);   
+                //event.cancelBubble=true;              
+	}
+   function grandChildEvent(event)
+	{
+            alert("innerMost-region in First Handler function" + event);                
+              // event.cancelBubble=true; ////Stop propagating event to next hierarchy
+
+            
+             // event.stopPropagation(); //Stop propagating event to next hierarchy  
+            //return false;
+            //event.preventDefault(); //Prevent the default behaviour of the event //NO IE browser support
+
+            //event.stopPropagation();//NO IE browser support
+
+               
+	}
+    
+      function secondgrandChildEvent(event)
+	{
+               alert("inner-most-region in second handler" + event);   
+                
+                //event.cancelBubble=true;              
+	}
+
+
+     function parentEvent(event)
+	{
+		    alert("outerMost-region event  " + event);
+                
+	}
+    
+
+ 
+</script>
+ </head>
+
+ <body)
+ 
+<div  style="width:500px;">
+
+	<div style="background-color:red; padding:40px;" onclick="parentEvent(event)";width=200px;">
+		<div style="background-color:green; padding:40px;" onclick="innerChildEvent(event);">
+			<div style="background-color:blue; padding:40px;" onClick="grandChildEvent(event);secondgrandChildEvent(event);">
+			</div>
+		</div>
+	</div>
+</div>
+
+<p></p>
+
+ 
+</body>
+
+</html>
+ 

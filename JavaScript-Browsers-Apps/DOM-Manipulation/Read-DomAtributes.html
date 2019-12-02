@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>DOM Element Attributes</title>
+</head>
+<body>
+<p id="p1" name="PG1" align="right" style='visibility:visible' >This is a passage written by Adams</p>
+<pre>This should appear as it & text < > here..</pre>
+<p id="p3"><h1>This is my text with higher size</h1></p>
+
+<form action="run" name="myForm" id="frm1">
+	<input type="button"  value="ReadAttribute" onclick="readAttributes()"/><br/>
+	<input type="button" name="updateButton" value="UpdateAttribute" onclick="UpdateAttributes()"/><br/>	 	 
+	 <input type="button" value="RemoveAttribute" onclick="removeAttribute()"/><br/>
+	 <input type="text" name="msg" value=" " size="25"/><br/>	 
+	 	 
+</form>
+
+<script type="text/javascript">
+function readAttributes()
+{
+	elm1 = document.getElementById('p1')	 
+	inputs= document.getElementsByName('msg')
+	//inputs['msg'].value=elm1.getAttribute('align')	//returns string value of attribute alogn
+	//The property attributes[] retrurns array of attribute nodes
+	//so read the individual attribute node value
+	inputs['msg'].value=elm1.attributes['align'].nodeValue  //nodeName is the attribute property name
+	//inputs['msg'].value=elm1.attributes.length number of attribute nodes
+	 
+	 
+}
+function UpdateAttributes()
+{
+	  
+	elm1 = document.getElementById('p1')
+	elm1.setAttribute("align", "left") 
+	 
+	//elm1.setAttribute("style", "visibility:visible") //not name,class, style or event handler attributes
+	
+}
+ 
+function removeAttribute()
+{
+	elm = document.getElementById('p1')
+	//elm.removeAttribute("style")///not id,name,align,class, style or event handler
+	 
+}
+
+</script>
+</body>
+</html>

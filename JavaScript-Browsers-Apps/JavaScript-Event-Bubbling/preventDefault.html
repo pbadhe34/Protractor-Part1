@@ -1,0 +1,24 @@
+<html>
+
+<head>
+ 
+<script type="text/javascript"> 
+
+function searchWeb(event)
+{
+  alert("You clicked for googling ?");
+  if(event.preventDefault)
+    event.preventDefault();
+  else event.cancelBubble=true;
+}
+
+</script>
+</head>
+
+<body>
+<p></p><p></p><a id="test" name='Link' href="http://www.google.com" onclick="searchWeb(event)">Search with the best!</a> 
+</body>
+
+</html>
+
+

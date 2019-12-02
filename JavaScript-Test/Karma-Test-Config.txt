@@ -1,0 +1,1 @@
+add karma test config for the same

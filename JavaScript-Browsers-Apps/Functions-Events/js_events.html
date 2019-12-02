@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<script type="text/javascript">
+  function myFunction()
+  {
+     alert("You cliked Me!");
+  }
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Event Handling in JavaScript</title>
+</head>
+<body onmousemove="HandleMove(event)">
+<p>Here is the Button to be clicked..</p><br/>
+<input type="button" value="Click Me"  accesskey="K" onclick="myFunction()"> 
+
+</body>
+<script type="text/javascript">
+function HandleMove(event)
+{
+
+       x = event.clientX
+       y = event.clientY
+	   status="Moving @ "+x +" and  "+y 
+}
+</script>
+</html>

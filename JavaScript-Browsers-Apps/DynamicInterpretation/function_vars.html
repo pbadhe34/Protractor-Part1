@@ -1,0 +1,45 @@
+<html>
+<body>
+
+<script type="text/javascript">
+
+var clickCount;
+var totalSum =100;
+getSum.totalSum = 0;//declare function variable with initial value
+
+function getSum(x,y)
+{
+	//function object variable defined for local static behavioiur 
+   
+  getSum.totalSum = getSum.totalSum + (x + y);
+  return getSum.totalSum;   
+
+}
+  
+function handleClicks()
+{
+	
+	clickCount++;
+	var yLocal = 100;
+	var xLocal = 100;
+	var sum = getSum(xLocal,yLocal);
+	alert("The recusrive total sum is  "+getSum.totalSum);	
+}
+
+ 
+</script>
+
+
+<form>
+<input type="button" value="Click Me!" 
+    onclick="handleClicks()"/>
+</form>
+
+
+</script> 
+
+</body>
+</html>
+
+
+

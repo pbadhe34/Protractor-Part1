@@ -1,0 +1,28 @@
+<html>
+
+<head>
+
+<script type="text/javascript">
+function EventResize()
+{
+  alert("RESIZING WINDOW")
+}
+function getfocus()
+{
+  alert("GOT FOCUS")
+}
+function eventLoad()
+{
+  alert("LOAD EVENT CATCHED")
+}
+</script>
+</head>
+
+<body onLoad='eventLoad()' onFocus='getfocus()' onResize='EventResize()'>
+<input type="button" value="sample ">
+</form>
+</body>
+
+</html>
+
+

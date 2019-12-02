@@ -1,0 +1,68 @@
+Install the version of protractor on global path of system
+ 
+npm install -g protractor@5.1.2
+  npm uninstall -g protractor@5.1.2
+
+  npm uninstall -g protractor 
+  
+  
+ Installs the protractor  with depenedent tools on global path.
+  Check the version of protractor and web driver manager
+  protractor -version
+  webdriver-manager --version
+  -->I/version - webdriver-manager 12.1.7
+  Update the browser driver for chrome browser and firefox browsrs by downloading from web.
+
+   webdriver-manager update
+
+  Update and download selenium jar
+  webdriver-manager update --standalone
+
+   webdriver-manager --ignore_ssl  update --standalone
+
+
+  Update the driver for Intrenet explorer
+  webdriver-manager update --ie64
+
+  webdriver-manager --ignore_ssl update --ie64  
+
+  webdriver-manager --ignore_ssl update --ff64  
+
+  webdriver-manager  update --ff64 
+
+  To run the test
+ 
+  
+  1. Set the path of java installation
+  set path=%path%;C:\Program Files\Java\jdk1.8.0_201\bin;
+
+   Check the java version
+   java -version
+
+  2. Start the selenium server in standalone mode
+  webdriver-manager start
+  -->Check the selenium console in browser with
+   http://localhost:4444/wd/hub
+  Launch the protractor test with config and test spec file 
+  3. From another cmd window and app dir
+   protractor conf.js
+
+  Now stop the selenium server in first window
+
+  Run again with second config file
+  protractor conf2.js
+
+ geckoDriver : '../../drivers/manager/selenium/geckodriver-v0.23.0.exe',
+
+  capabilities: { 
+    'browserName': 'firefox',
+     marionette: true,
+    'moz:firefoxOptions': {
+       "binary": "C:/Program Files/Mozilla Firefox/firefox.exe",
+       'args': ['--verbose']
+      }    
+ 
+  },
+
+// geckoDriver: "C:\\Users\\Admin\\AppData\\Roaming\\npm\\node_modules\\protractor\\node_modules\\webdriver-manager\\selenium\\geckodriver-v0.26.0.exe",
+ 

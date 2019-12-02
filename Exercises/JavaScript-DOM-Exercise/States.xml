@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<states>
+    <north id='id1' name='Indian_progressive_States' group="northians">
+        <state id ="MyState" type="Agri">UP</state>
+        <state id ="State2" type="CoalMines">Bihar</state>
+        <state id="s3" type='tourism'>Harayana</state>
+    </north>
+    <south id='id2' name='Indian_south_States' group="southians">
+        <state id="s4" type="it_sate">Karnataka</state>
+        <state id="s3" type="tourist_state">Kerala</state>
+        <state id="s1" type='templeState'>TamilNadu</state>
+		<state>
+			<id>id4</id>
+			<name>Uttarnchal</name>
+			<type>CoalMines</type>
+			<group>New State</group>
+		</state>
+    </south>
+    <west id='id3' name='Indian_westen_States' group="agriculture">
+        <state id="s1" type="agri_zone">Maharashtra</state>
+        <state id="s2" type="State of Tourism">Gujrat</state>
+        <state id="s3" type="Desert">Rajasthan</state>
+    </west>
+    <east id='id4' name='Indian_eastern_States' group="flooded_states">
+        <state id="s5" type="rice_state">West Bengal</state>
+		<state id="s3" type="coal_zone">Orissa</state>
+        <state id="s2" type="forest_zone">Nagaland</state>
+        <state id="s4" type="flood_zone">Assam</state>
+		<state>
+			<id>id6</id>
+			<name>Mizoram</name>
+			<type>MountainState</type>
+			<group>Tourism</group>
+		</state>
+    </east>
+</states>

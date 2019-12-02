@@ -1,0 +1,28 @@
+<html>
+<body>
+This image here is getting updated..
+<img id="image" src="duke.gif" width="32" height="32">
+
+<script type="text/javascript">
+function update()
+{
+
+document.getElementById('image').src="Cheeta.gif";
+
+}
+function restore()
+{
+
+document.getElementById('image').src="duke.gif";
+
+}
+</script>
+  <p>
+ <input type="button" onclick='update()' value='UpdateImage'/></br></p>
+ <input type="button" onclick='restore()' value='RestoreImage'/>
+
+
+
+</body>
+</html>
+

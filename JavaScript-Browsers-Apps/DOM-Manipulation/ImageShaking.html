@@ -1,0 +1,32 @@
+ <html>
+<head>
+<script type="text/javascript">
+function shakeleft()
+{
+document.getElementById('image').style.position="relative";
+document.getElementById('image').style.left="3";
+timer=setTimeout("shakeright()",10);
+}
+
+function shakeright()
+{
+document.getElementById('image').style.left="0";
+timer=setTimeout("shakeleft()",10);
+}
+
+function stoptimer()
+{
+clearTimeout(timer);
+}
+</script>
+</head>
+
+<body>
+<b>Mouse over the image to see it shake</b><br />
+<img id="image" src="duke.gif" 
+onmouseover="shakeleft()"
+onmouseout="stoptimer()" width="82" height="82" />
+</body>
+
+</html>
+

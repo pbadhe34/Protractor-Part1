@@ -1,0 +1,46 @@
+<html>
+
+<head>
+<script type="text/javascript">
+function validate()
+{
+	x=document.myForm
+	at=x.email.value.indexOf("@")
+	code=x.code.value
+	firstname=x.fname.value
+	submitOK="True"
+
+if (at==-1) 
+ {
+	 alert("Not a valid e-mail!")
+	 submitOK="False"
+ }
+if (code<1 || code>5)
+ {
+	 alert("The value must be between 1 and 5")
+	 submitOK="False"
+ }
+if (firstname.length>10)
+ {
+	 alert("Your name must be less than 10 characters")
+	 submitOK="False"
+ }
+if (submitOK=="False")
+ {
+     return false
+ }
+}
+</script>
+</head>
+
+<body>
+<form name="myForm" action="/test" onsubmit="return validate()">
+Enter your e-mail: <input type="text" name="email" size="20"><br />
+Enter a value from 1 to 5: <input type="text" name="code" size="20"><br />
+Enter your name, max 10 chararcters: <input type="text" name="fname" size="20"><br />
+<input type="submit" value="Submit"> 
+</form>
+</body>
+
+</html>
+

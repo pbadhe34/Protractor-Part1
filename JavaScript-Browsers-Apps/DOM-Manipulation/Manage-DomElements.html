@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head> 
+<title>JavaScipt DOM Elements</title>
+</head>
+<body>
+<p id="p1" name="PG1">This is a passage written by Adams</p>
+<pre>This should appear as it & text < > here..</pre>
+<p id="p3"><h1>This is my text with higher size</h1></p>
+
+<form action="run" name="myForm" id="frm1">
+	<input type="button"  value="Read" onclick="readElement()"/><br/>
+	<input type="button" name="updateButton" value="Update" onclick="updateElement()"/><br/>
+	<input type="button" value="AddElement" onclick="addElement()"/><br/>
+	<input type="button" value="RemoveElement" onclick="removeElement()"/><br/>
+	<input type="text" name="msg" id="m1" value=" " size="40"/><br/>
+	<input type="text" name="msg" id="m2" value=" " size="20"/><br/>
+	<input type="text" name="msg3" value=" " size="25"/>
+	
+	 
+</form>
+<p id="p2" name="PG2" title="Humans">All good people should work for betterment of poor and hungry...</p>
+<script type="text/javascript">
+function readElement()
+{
+	elm1 = document.getElementById('p2')
+	form = document.getElementById('frm1')
+	inputs= document.getElementsByName('msg')
+	inputs['m2'].value=elm1.getAttribute('title')	
+	inputs[0].value=form.getAttribute('action')
+	
+	
+	inputTypes = form.getElementsByTagName('input')
+	
+	//inputTypes['msg3'].value=elm1.firstChild.nodeType //3 for textnode, 1 for element 2 for attribite node
+	inputTypes['msg3'].value=elm1.firstChild.nodeValue //if it is textNode
+	 
+}
+function updateElement(value)
+{
+	elm1 = document.getElementById('p1')
+	elm1.innerHTML="<font color='blue'>This is updated..</font>"
+
+	elm2 = document.getElementsByTagName("h1")
+	elm2[0].firstChild.nodeValue="New text with same size.."
+	
+}
+function addElement()
+{
+	newInput = document.createElement("input")
+	newInput.setAttribute("id", "myNewText")
+	newInput.setAttribute("value", "This is new value added")
+
+	form = document.getElementById('frm1')
+	
+	newLine = document.createElement("br")
+	form.appendChild(newLine)
+	form.appendChild(newInput)
+
+	newText=document.createTextNode("New Statement")
+	elm = document.getElementById('p3')
+	elm.appendChild(newText)
+
+	newButton = document.createElement("button")	 
+	newButton.setAttribute("value", "New Button")
+	 
+	Btn1= document.getElementById('updateButton')
+	form.insertBefore(newButton, Btn1)
+	
+	
+}
+function removeElement()
+{
+	 
+	addedChild = document.getElementById('myNewText')
+	form = document.getElementById('frm1')
+	form.removeChild(addedChild)
+}
+
+</script>
+</body>
+</html>
+
+</body>
+  
+ 
+</html>

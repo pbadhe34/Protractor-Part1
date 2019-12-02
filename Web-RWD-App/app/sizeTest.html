@@ -1,0 +1,108 @@
+<html>
+<title>Browser Size test</title>
+
+
+<script type="text/javascript" src="jquery-1.9.1.js">
+</script> 
+
+
+
+<body>
+
+ <h1>This is sample test page</h1>
+ 
+<a href="javascript:alertSize();">Test</a>
+
+ <div id='div1'></div>
+<div id='div2'></div>
+<div id='div3'></div>
+
+<script type="text/javascript">
+ 
+update();
+
+
+function alertSize() {
+  var myWidth = 0, myHeight = 0;
+  if( typeof( window.innerWidth ) == 'number' ) {
+    //Non-IE
+    myWidth = window.innerWidth;
+    myHeight = window.innerHeight;
+  } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+    //IE 6+ in 'standards compliant mode'
+    myWidth = document.documentElement.clientWidth;
+    myHeight = document.documentElement.clientHeight;
+  } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+    //IE 4 compatible
+    myWidth = document.body.clientWidth;
+    myHeight = document.body.clientHeight;
+  }
+  window.alert( 'Width = ' + myWidth );
+  window.alert( 'Height = ' + myHeight );
+}
+function update()
+{
+console.log("Window resized in update");
+var h1 =  window.outerHeight;
+var w1 = window.outerWidth ;
+
+ 
+var h2 = document.documentElement.clientHeight ;  
+ 
+var w2 = document.documentElement.clientWidth ; 
+ 
+
+/*
+var h2 = document.body.scrollHeight ;  
+ 
+var w2 = document.body.scrollWidth ; 
+*/
+
+var h3= screen.height;
+var w3 = screen.width;
+
+document.getElementById("div1").innerHTML
+
+='<p>The Screen size is '+w3+'x'+h3+'px'+'</p>';
+
+document.getElementById("div2").innerHTML='<p>The Current Window size is '+w1+'x'+h1+'px'+'</p>';
+
+document.getElementById("div3").innerHTML='<p>The Current Page size is '+w2+'x'+h2+"px"+'</p>';
+
+}    
+
+window.addEventListener('resize', update, true); 
+
+
+/*  
+
+$(window).resize(function () {    
+     
+console.log("The Window resized");
+var h1 = $(window).height();    
+var h2 = $(document).height(); 
+
+var w1 = $(window).width();   
+ 
+var w2 = $(document).width(); 
+
+var h3= screen.height;
+var w3 = screen.width;
+
+document.getElementById("div1").innerHTML
+
+='<p>The Device Screen size is '+w3+'x'+h3+'</p>';
+
+document.getElementById("div2").innerHTML='<p>The Current Window size is '+w1+'x'+h1+'</p>';
+
+document.getElementById("div3").innerHTML='<p>The Current Page size is '+w2+'x'+h2+'</p>'; 
+
+});
+*/
+
+
+ 
+
+</script>
+<body>
+</html>

@@ -1,0 +1,18 @@
+  VS Code extensions for Protractor 
+
+  Auro completion
+  Protractor snippets  
+
+  To run a TS file, enables you to right-click on a .ts file and test 
+  it with Protractor.
+
+  Protractor Test Runner
+
+  To create a template for e2e test writing 
+   for angularjs using protractor
+
+  VsCodeTestGenerator
+
+   Right-click the file for which you want to create a test and click Generate Test
+
+   

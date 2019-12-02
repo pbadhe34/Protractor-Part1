@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" 
+	"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+
+ 
+<head>
+	
+	<title>Event Handler Sharing</title>    
+	 
+</head>
+<body> 
+<h1 id="MyId" onclick="MyHandler(event)">Event Handler sharing</h1><br><p>
+<div id="me"  onclick="MyHandler(event)">
+     <b>See the effect </b>           
+</div>
+<br><p>
+
+<button id="Btn" onclick="MyHandler(event)">TryMe</button>  
+
+<script type="text/javascript">
+ function MyHandler(event)
+   { 	     
+		 alert("My Handler Handling the same click event for different controls!");		  
+	     
+		 alert("Event Type is  "+event.type);		 
+
+			var arg
+			if (event)
+			{
+			  var e = window.event;   
+			}
+			if (e.target) 
+			{
+			  arg = e.target
+			  alert("Event Target is ");
+			  }
+			else if (e.srcElement)
+			{
+			   arg = e.srcElement
+			   alert("Event source is "); 
+			 }
+			 
+			var tname
+			tname=arg.tagName
+			alert(tname);
+
+   }  
+</script>
+
+
+ 
+	 
+</body>
+</html>

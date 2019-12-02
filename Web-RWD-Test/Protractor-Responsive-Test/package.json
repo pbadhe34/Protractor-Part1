@@ -1,0 +1,25 @@
+{
+  "name": "response-test",
+  "version": "1.0.0",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "updateDriver": "webdriver-manager update",
+    "updateDriver2": "webdriver-manager update --standalone",
+    "start-selenium": "webdriver-manager start",
+    "test": "protractor config.js",
+    "test-FireFox": "protractor config-FF.js", 
+    "test-Mobile": "protractor config-mobile.js" ,
+    "test-Headless": "protractor conf-headless.js" ,
+     "test-Responsive": "protractor config-responsive.js"                                                         
+  },
+  "author": "Prakash Badhe",
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine-reporters": "^2.0.0",
+    "protractor": "5.1.2",
+    "protractor-html-screenshot-reporter": "0.0.21",
+    "protractor-jasmine2-html-reporter": "0.0.6"
+  }
+}

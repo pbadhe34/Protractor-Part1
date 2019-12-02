@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>setinterval()</title>
+<script language="javascript">
+colors=new Array("red","blue","green","black")
+index=0
+window.defaultstatus="time"
+function func()
+{
+if(index>3)
+{
+index=0
+document.bgColor=colors[index]
+index++
+}
+else
+{
+document.bgColor=colors[index]
+index++
+}
+}
+function startbk()
+{
+  ref=setInterval("func()",1500)
+  //starts the timer calling func() every 1500 msec
+}
+function stopbk()
+{
+clearInterval(ref)
+}
+</script>
+</head>
+<body>
+<center>
+<input type="button" name="but1" value="start colour change" onClick='startbk()'>
+<input type="button" name="but2" value="stop colour change" onClick='stopbk()'>
+</center>
+</body>
+</html>
+
